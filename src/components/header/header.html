@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <span class="navbar-brand">
+      Company Analysis
+    </span>
+ 
+      <div class="dropdown pull-right" *ngIf="authProvider.isAuthenticated()">
+          <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="photo" [src]="getPhotoUrl()" />
+            {{ getName() }}
+          </button>
+          <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#" (click)="signOut()">Sign out</a>
+          </div>
+        </div>
+  </div>
+</nav>
+<br>
